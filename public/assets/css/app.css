@@ -11,3 +11,13 @@ h2 {
     font-size: 1.4em;
     line-height: 1.4em;
 }
+h3 {
+    font-size: 1.2em;
+    line-height: 1.4em;
+    color: #555;
+    cursor: pointer;
+    margin-left: 10px;
+}
+li {
+    margin-left: 20px;
+}

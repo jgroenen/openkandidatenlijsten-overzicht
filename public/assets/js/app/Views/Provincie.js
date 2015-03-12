@@ -26,16 +26,14 @@ define([
         },
         
         expand: function () {
-            if (this.expanded) return;
-            
-            this.expanded = true;
+            this.$(".lijsten").toggle();
         },
         
         render: function () {
             var provincieView = this;
             this.$el.html(this.template(this));
             this.lijstViews.forEach(function (lijstView) {
-                provincieView.$el.append(lijstView.$el);
+                provincieView.$(".lijsten").append(lijstView.$el);
             });
             return this;
         }

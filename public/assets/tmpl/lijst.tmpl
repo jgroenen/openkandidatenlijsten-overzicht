@@ -1,5 +1,17 @@
 <h3>
-    <a href="<%= model.get("url") %>">
+    <!--<a href="<%= model.get("url") %>">-->
         <%= model.get("lijstnummer") %>. <%= model.get("naam") %>
-    </a>
+    <!--</a>-->
 </h3>
+<section class="kandidaten">
+    <% if (kandidaten) { %>
+        <ol>
+            <% kandidaten.forEach(function (kandidaat) { %>
+                <li>
+                    <%= kandidaat.get("position") %>. 
+                    <%= kandidaat.get("full_name") %> (<%= kandidaat.get("gender") %>, <%= kandidaat.get("place") %>)
+                </li>
+            <% }) %>
+        </ol>
+    <% } %>
+<section>
