@@ -8,8 +8,8 @@
         <ol>
             <% kandidaten.forEach(function (kandidaat) { %>
                 <li>
-                    <%= kandidaat.get("position") %>. 
-                    <%= kandidaat.get("full_name") %> (<%= kandidaat.get("gender") %>, <%= kandidaat.get("place") %>)
+                    <h4><%= kandidaat.get("position") %>. <%= kandidaat.get("full_name") %></h4>
+                    <p><%= kandidaat.get("gender") %>, <%= kandidaat.get("place") %></p>
                 </li>
             <% }) %>
         </ol>

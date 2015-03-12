@@ -1,7 +1,7 @@
 define([
     'settings',
     'text!templates/application.tmpl',
-    'text!/overzicht.json',
+    'text!overzicht.json',
     'Views/Provincie',
     'Models/Provincie'
 ], function (settings, template, data, ProvincieView, ProvincieModel) {
