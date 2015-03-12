@@ -7,7 +7,7 @@ define([
         template: _.template(template),
 
         events: {
-            "click": "expand"
+            "click h3": "expand"
         },
 
         initialize: function () {
