@@ -1,1 +1,17 @@
 <h1>Kandidatenlijsten</h1>
+
+<% for (var i = 0; i < lijsten.provincies.length; ++i) { var provincie = lijsten.provincies[i]; %>
+
+    <h2><%= provincie.naam %></h2>
+    
+    <ul>
+    
+    <% for (var j = 0; j < provincie.lijsten.length; ++j) { var lijst = provincie.lijsten[j]; %>
+    
+    <li><a href="<%= lijst %>"><%= lijst %></a></li>
+    
+    <% } %>
+    
+    </ul>
+
+<% } %>
