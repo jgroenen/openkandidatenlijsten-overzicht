@@ -15,12 +15,10 @@ define([
             var provincieView = this;
             this.expanded = false;
             this.lijstViews = [];
-            this.model.get("lijsten").forEach(function (url) {
-                var model = new LijstModel();
-                model.url = url;
+            this.model.get("lijsten").forEach(function (lijst) {
                 provincieView.lijstViews.push(
                     new LijstView({
-                        model: model
+                        model: new LijstModel(lijst)
                     })
                 );
             });
@@ -29,11 +27,16 @@ define([
         
         expand: function () {
             if (this.expanded) return;
+            
             this.expanded = true;
         },
         
         render: function () {
+            var provincieView = this;
             this.$el.html(this.template(this));
+            this.lijstViews.forEach(function (lijstView) {
+                provincieView.$el.append(lijstView.$el);
+            });
             return this;
         }
     });

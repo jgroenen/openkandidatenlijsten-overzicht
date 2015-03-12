@@ -11,10 +11,6 @@ define([
             this.render();
         },
         
-        expand: function () {
-            this.model.fetch();
-        },
-        
         render: function () {
             this.$el.html(this.template(this));
             return this;
