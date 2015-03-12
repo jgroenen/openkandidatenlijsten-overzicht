@@ -14,7 +14,7 @@ define([
             var applicationView = this;
             this.data = JSON.parse(data);
             this.provincieViews = [];
-            this.data.provincies.forEach(function (provincie) {
+            this.data.kieslijsten.forEach(function (provincie) {
                 applicationView.provincieViews.push(
                     new ProvincieView({
                         model: new ProvincieModel(provincie)
