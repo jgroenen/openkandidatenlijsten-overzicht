@@ -1,5 +1,5 @@
 body {
-    font-family: Arial;
+    font-family: "Open Sans", Arial;
     font-size: 100%;
     line-height: 1.4em;
 }
@@ -26,10 +26,11 @@ h3 {
 h4 {
     font-weight: 900;
 }
-p {
-    margin-left: 30px;
+h4 span {
+    font-weight: 100;
+    color: #777;
 }
 li {
-    margin-left: 20px;
+    margin-left: 5px;
     padding: 4px 8px;
 }
